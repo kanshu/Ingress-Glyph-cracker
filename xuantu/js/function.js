@@ -20,6 +20,7 @@ function selectCheck() {
             candList[3], 1, candList[4], 1);
 
     }
+
 }
 
 function findGlyph(points) {
@@ -64,8 +65,9 @@ function selectClear() {
         arr[i] = 0;
     }
     var str = arr.join(""); //输出的11位字符串
-    console.log(str);
 }
+
+
 
 // 功能: 禁用一个a元素;
 // 参数:
@@ -83,7 +85,7 @@ function disableLink(link) {
 function enableLink(link) {
 
     // 重新设置href
-    link.setAttribute("href", "javascript:event();");
+    link.setAttribute("href", "javascript:event('"+link.id+"');");
     // 删除disabled属性
     link.removeAttribute("disabled");
 }
@@ -145,6 +147,11 @@ window.onload = function() {
     };
 };
 
-function event() {
-
+// 功能:响应事件，参数a为5张图片的id（序号，1 - 5）
+function event(a) { 
+    var oImg = document.getElementsByClassName("img");
+    var name=oImg[a-1].getAttribute("src").substring(4);//图片名称
+    console.log("image "+a+" was selected，its name is "+name);
 }
+
+
