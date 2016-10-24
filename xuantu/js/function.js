@@ -18,11 +18,11 @@ function selectCheck() {
   fillGlyph(candList);
 }
 
-function fillGlyph(candList, imgState = 1) {
+function fillGlyph(candList, imgState) {
   stateList = [].fill(0, 0, 5);
   if (candList.length > 0) {
     for (var i = 0; i < candList.length; i++) {
-      stateList[i] = imgState;
+      stateList[i] = 1;
     }
     candList.fill("undefined", candList.length, 5)
     setGlyph(candList[0], stateList[0], candList[1], stateList[1], candList[2], stateList[2], candList[3], stateList[3], candList[4], stateList[4]);
@@ -90,8 +90,8 @@ function enableLink(link) {
 }
 //设置右边各个区域的图形及状态
 //参数:
-//	图片名(jpg格式)：a1_name，a2_name，a3_name，a4_name，a5_name
-//	图片状态（是否可点击 0/1）：a1_state，a2_state，a3_state，a4_state，a5_state
+//  图片名(jpg格式)：a1_name，a2_name，a3_name，a4_name，a5_name
+//  图片状态（是否可点击 0/1）：a1_state，a2_state，a3_state，a4_state，a5_state
 function setGlyph(a1_name, a1_state, a2_name, a2_state, a3_name, a3_state, a4_name, a4_state, a5_name, a5_state) {
   var oImg = document.getElementsByClassName("img");
   var linkList = document.getElementsByClassName("lk");
@@ -133,6 +133,9 @@ window.onload = function() {
     initoOerlay();
   };
 };
+
+
+
 
 function findNextGlyph(leadingGlyphList) {
   glyphList = [];

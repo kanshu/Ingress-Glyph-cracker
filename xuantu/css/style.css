@@ -3,7 +3,11 @@
     padding: 0;
 }
 body {
-    background: rgb(123, 158, 158);
+    background: #102023;
+}
+
+input {
+    font-size: 18px;
 }
 #hexGrid {
     overflow: hidden;
@@ -145,15 +149,19 @@ body {
 }
 
 #btn1{
-        background-color: #4CAF50; /* Green */
-    border: none;
+        
+    border: #00ffff 2px solid;
+    border: #00ffff 2px solid;
     color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 30px;
-    margin-top: 100px;
+    margin-top: 10px;
+    background: -moz-linear-gradient(top, #096e75,#1f484b 50%,#096e75);
+    background: -webkit-linear-gradient(top,#096e75,#1f484b 50%,#096e75);
+    background: -o-linear-gradient(top, #096e75,#1f484b 50%,#096e75);
 }
 
 .overlay{
@@ -164,67 +172,122 @@ body {
     z-index: 1;
 }
 
+.overlay2{
+        width: 100%;
+    height: 100%;
+
+    opacity: 0.5;
+    z-index: -1;
+    background: -moz-radial-gradient(50% 50%, closest-corner, #096e75, #1f484b); 
+/* Safari 4-5, Chrome 1-9 */
+background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, from(#096e75), to(#1f484b)); 
+/* Safari 5.1+, Chrome 10+ */
+background: -webkit-radial-gradient(50% 50%, closest-corner, #096e75, #1f484b);
+}
+
 
 #hexGrid {
-    padding-top: 80px;
+    padding-top: 40px;
+    padding-bottom: 10px;
 }
 
 .left .hexIn {
     display: block;
-    background-color: blue;
+    /* Firefox 3.6+ */ 
+/* -moz-radial-gradient( [ || ,]? [ || ,]? , [, ]* ) */
+background: -moz-radial-gradient(50% 50%, closest-corner, #096e75, #1f484b); 
+/* Safari 4-5, Chrome 1-9 */
+background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, from(#096e75), to(#1f484b)); 
+/* Safari 5.1+, Chrome 10+ */
+background: -webkit-radial-gradient(50% 50%, closest-corner, #096e75, #1f484b);
 }
+
+.box{
+        display: block;
+        width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    margin-left: -0.5em;
+    margin-top: 1em;
+}
+
+
 
 #r1{
     margin-top: 16.66666%;
     margin-left: 0;
+    width: 1em;
+    height: 1em;
 }
 
 
 #r2{
     margin-top: 33.333333%;
     margin-left: -33.333333%;
+    width: 1em;
+    height: 1em;
 }
 
 #r3{
     margin-top: 33.333333%;
     margin-left: 33.333333%;
+    width: 1em;
+    height: 1em;
 }
 
 #r4{
     margin-top: 41.666666%;
     margin-left: -16.66666%;
+    width: 1em;
+    height: 1em;
 }
 
 #r5{
     margin-top: 41.666666%;
     margin-left: 16.66666%;
+    width: 1em;
+    height: 1em;
 }
 
 #r6{
     margin-top: 50%;
     margin-left: 0%;
+    width: 1em;
+    height: 1em;
 }
 
 #r7{
     margin-top: 58.444444%;
     margin-left: -16.66666%;
+    width: 1em;
+    height: 1em;
 }
 
 #r8{
     margin-top: 58.444444%;
     margin-left: 16.66666%;
+    width: 1em;
+    height: 1em;
 }
 #r9{
     margin-top: 66.666666%;
     margin-left: -33.333333%;
+    width: 1em;
+    height: 1em;
 }
 #r10{
     margin-top: 66.666666%;
     margin-left: 33.333333%;
+    width: 1em;
+    height: 1em;
 }
 #r11{
     margin-top: 83.333333%;
     margin-left: 0%;
+    width: 1em;
+    height: 1em;
 }
 
 /*** SPACING AND SIZING *****************************************************************/
